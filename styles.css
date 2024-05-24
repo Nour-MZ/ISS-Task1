@@ -1,0 +1,273 @@
+
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/playfair-display');
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
+html, body {
+  overflow-x: hidden;
+}
+
+:root{
+    --main-font: 'Montserrat', sans-serif;
+    --second-font: 'Playfair Display', sans-serif;
+    --third-font:  'Open Sans', sans-serif;
+    --main-color:#1D1D1D;
+    --second-color: #666666;
+    --third-color: #95989A ;
+    --cta-color: #1005FF;
+}
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.playfair{
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.open-sans{
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  position: relative;
+ margin: 0;
+ padding: 0;
+ overflow-x: none;
+}
+.image{
+  object-fit: cover;
+}
+.landing {
+    height: 75vh;
+    
+}
+
+.liner{
+  
+  height: 2px;
+  background-color: black;
+  width:60px;
+  top: 10px;
+}
+
+.testoo{
+  position: relative;
+}
+
+.testoo::after{
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+
+}
+
+.f14{
+  font-size:14px;
+}
+
+.f12{
+  font-size:12px;
+}
+
+.h-55{
+  height:50px;
+}
+.h-273{
+  height: 273px;
+}
+
+.h-333{
+  height: 333px;
+}
+
+
+.h-668{
+  height: 668px;
+}
+
+.h-70{
+  height: 66%;
+}
+
+.h-80{
+  height:80%;
+}
+
+.h-90{
+  height: 95%;
+}
+
+.bg-secondo{
+  background-color: #F3F7F8;
+
+}
+  .cover{
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .right-0{
+    right: 0;
+  }
+
+  .drk:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.6;
+  }
+
+  li a {
+
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 20px;
+    transition: 0.2s ease-in-out;
+ 
+ }
+
+.img-overlay-wrapper{
+  position: relative;
+  width: 100%;
+}
+
+.testoo::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110%;
+  width: 100%;
+  background-color: black;
+  z-index: 99;
+}
+.overlayer-extra{
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  background:rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+    padding: 30px;
+    padding-bottom: 20px;
+   height: 93%;
+   border-radius: 3%;
+}
+
+.card-title-new{
+  font-size: 16px;
+  font-weight: bold;
+  font-family: var(--main-font);
+  
+}
+
+.card-text-new{
+  font-size: 16px;
+  
+  font-family: var(--third-font);
+  color: #D1D1D1 !important;
+
+}
+
+.overlayer-extra>*{
+  color: white;
+  opacity: 1 !important;
+}
+
+.img-overlay-wrapper:hover{
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: 0.3s ease-in !important;
+
+}
+
+.img-overlay-wrapper:not(hover){
+
+  transition: 0.3s ease-in !important;
+}
+
+
+.big-scale:not(:hover){
+  transition: 0.3s ease-in !important;
+}
+.big-scale:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: 0.3s ease-in !important;
+  
+}
+
+/*  
+.about-img-cont:hover>.about-img-1{
+  transform: translateX(50%);
+  transition: 0.3s ease-in-out ;
+}
+.about-img-cont:hover>.about-img-2{
+   transform: translateX(-50%);
+  transition: 0.3s  ;
+  transition-timing-function:ease-in-out !important;
+}
+
+
+.about-img-2{
+  transition-timing-function:ease-in-out !important;
+
+} */
+
+ .arrow-anim{
+  cursor: pointer;
+ }
+ .arrow-anim>img{
+  transition: 0.2s ease-in-out;
+ }
+
+ .arrow-anim:hover>img{
+    opacity: 0;
+    transform: translateX(20px);
+ }
+
+ .nav-link:hover{
+  color:#1005FF;
+  transition: 0.3s ease-in-out
+ }
+
+ .btn-anim:hover{
+    background-color: #06007a !important;
+ }
+
+ @keyframes scale-image {
+  from {
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+
+  .imgoo-animation {
+    animation-name: scale-image;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    
+  }
+
+
+
+ @media (min-width: 992px) { 
+
+  .elcont{
+    height: 888px;
+  }
+ }
