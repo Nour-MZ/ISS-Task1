@@ -11,64 +11,24 @@
     
 </head>
 <body>
-    
-  <!-- Navbar for Menu -->
-  <!--Used both navbar and offcanvas componenets since offcanvas doesn't support transfer of elements, and the bootstrap nav bar animation looks bad-->
-  <div class="offcanvas offcanvas-end" id="demo">
-    <div class="offcanvas-header">
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="nav navbar-nav justify-content-end navbar-collapse  fw-bold " style="font-family: var(--main-font);">
-        <li class="nav-item">
-            <a class="nav-link " href="#">ABOUT US</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">SHOP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">PORTFOLIO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ELEMENTS</a>
-          </li>
-      </ul>
-    </div>
-  </div>
 
-  <nav class="navbar navbar-right position-absolute vw-100 z-1  pt-4 navbar-expand-xl bg-none">
-    <div class="container justify-content-between align-content-end ">
-      <a class="navbar-brand d-flex  justify-content-center align-items-center  align-content-center " href="#">
-        <img src="assets/group.svg" alt="Logo"class="img-fluid me-4">
-        <div class="liner"></div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
-          <ul class="nav navbar-nav justify-content-end navbar-collapse  fw-bold f14" style="font-family: var(--main-font);">
-            <li class="nav-item me-3">
-                <a class="nav-link " href="#">ABOUT US</a>
-              </li>
-              <li class="nav-item me-3">
-                <a class="nav-link" href="#">SHOP</a>
-              </li>
-              <li class="nav-item me-3">
-                <a class="nav-link" href="#">PORTFOLIO</a>
-              </li>
-              <li class="nav-item me-3">
-                <a class="nav-link" href="#">BLOG</a>
-              </li>
-              <li class="nav-item me-3">
-                <a class="nav-link" href="#">ELEMENTS</a>
-              </li>
-          </ul>
+    <nav class="ne-navbar">
+      <div class="container navcontainer px-5 py-2">
+        <div class="ne-logo navbar-brand d-flex justify-content-center align-items-center  align-content-center " href="#">
+          <img src="assets/group.svg" alt="Logo"class="img-fluid me-4">
+          <div class="liner"></div>
         </div>
-      </div>
-    </nav>
+        <div class="ne-menu" id="ne-menu">
+            <button class="ne-menu-close" id="ne-menu-close">&times;</button>
+            <a class="nav-link " href="#">ABOUT US</a>
+            <a class="nav-link" href="#">SHOP</a>
+            <a class="nav-link" href="#">PORTFOLIO</a>
+            <a class="nav-link" href="#">BLOG</a>
+            <a class="nav-link" href="#">ELEMENTS</a>
+        </div>
+    </div>
+      <button class="ne-menu-toggle me-5" id="ne-menu-toggle">☰</button>
+  </nav>
 
     <!--Hero Section-->
     <div class="fluid-container position-relative  vw-100 p-0 m-0 vh-100 ">
@@ -96,8 +56,8 @@
         <div class="row h-100 justify-content-lg-between justify-content-center align-content-around">
             <div class="col h-100 col-10 col-lg-5 position-relative justify-content-center align-content-around  ">
               <h1 class="montserrat fw-bold ">About Us</h1>
-              <p class="lead playfair my-4" style="color:var(--second-color)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, magnam.</p>
-              <p class="open-sans" style="color:var(--third-color)">Est perspiciatis cupiditate distinctio officiis officia beatae vero assumenda voluptatum. Omnis nulla quos cumque id, necessitatibus sed in exercitationem adipisci, harum velit nam nihil eaque eveniet veniam eos quo, minima qui, rem aspernatur. Vero nisi doloremque, at accusantium iure, dignissimos error architecto dolor.</p>
+              <p class="lead playfair my-4 " style="color:var(--second-color)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, magnam.</p>
+              <p class="open-sans about-par" style="color:var(--third-color)">Est perspiciatis cupiditate distinctio officiis officia beatae vero assumenda voluptatum. Omnis nulla quos cumque id, necessitatibus sed in exercitationem adipisci, harum velit nam nihil eaque eveniet veniam eos quo, minima qui, rem aspernatur. Vero nisi doloremque, at accusantium iure, dignissimos error architecto dolor.</p>
             </div>
             <div class="about-img-cont col h-100 col-0 d-none d-lg-block col-lg-6 col-xl-5 position-relative">
                 <img src="assets/hand1.png" class="img-fluid about-img-1 imagerx position-absolute top-0 img-fluid" alt="" >
@@ -125,19 +85,21 @@
 
 
       <div class="row">
-        <div class="col-lg-6 big-scale col-md-12 mb-4 mb-lg-0">
+        <div class="col-lg-6 big-scale col-md-12 mb-4 mb-lg-0 ">
+          <div class="wrapper">
           <img
             src="assets/big-image.png"
             class="w-100 shadow-1-strong rounded mb-4"
             alt="Boat on Calm Water"
           />
         </div>
+        </div>
       
         <div class="col-lg-6 col-12 mb-4 mb-lg-0 position-relative ">
-          <div class="row">
+          <div class="row h-50">
             <div class="col-lg-6">
               <div class="img-overlay-wrapper">
-                <img src="assets/kookoo.png" class="w-100 h-100 shadow-1-strong rounded mb-4"  alt="Yosemite National Park" />
+                <img src="assets/kookoo.png" class="shadow-1-strong rounded mb-4"  alt="Yosemite National Park" />
                 <div class="card-img-overlay overlayer-extra  justify-content-end ">
                   <h5 class="card-title card-title-new opacity-100">This Backpack Will </h5>
                   <p class="card-text card-text-new">$85.00</p>
@@ -148,7 +110,7 @@
 
             <div class="col-12 col-lg-6">
               <div class="img-overlay-wrapper">
-                <img src="assets/scoop.png" class="w-100 h-100 shadow-1-strong rounded mb-4"  alt="Yosemite National Park" />
+                <img src="assets/scoop.png" class="shadow-1-strong rounded mb-4"  alt="Yosemite National Park" />
                 <div class="card-img-overlay overlayer-extra  justify-content-end ">
                   <h5 class="card-title card-title-new opacity-100">This Backpack Will </h5>
                   <p class="card-text card-text-new">$85.00</p>
@@ -160,7 +122,7 @@
           <div class="row">
             <div class="col-lg-6 col-12 mb-4 mb-lg-0 position-relative ">
               <div class="img-overlay-wrapper">
-                <img src="assets/headphone.png" class="w-100 h-100 shadow-1-strong rounded mb-4"  alt="Yosemite National Park" />
+                <img src="assets/headphone.png" class=" shadow-1-strong rounded mb-4"  alt="Yosemite National Park" />
                 <div class="card-img-overlay overlayer-extra  justify-content-end ">
                   <h5 class="card-title card-title-new opacity-100">This Backpack Will </h5>
                   <p class="card-text card-text-new">$85.00</p>
@@ -170,7 +132,7 @@
             
             <div class="col col-lg-6">
               <div class="img-overlay-wrapper">
-                <img src="assets/backpack.png" class="w-100 h-100 shadow-1-strong rounded mb-4 z-n1"  alt="Yosemite National Park" />
+                <img src="assets/backpack.png" class=" shadow-1-strong rounded mb-4 z-n1 elimage"  alt="Yosemite National Park" />
                 <div class="card-img-overlay overlayer-extra  justify-content-end ">
                   <h5 class="card-title card-title-new opacity-100">This e Will </h5>
                   <p class="card-text card-text-new">$85.00</p>

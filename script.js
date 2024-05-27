@@ -1,14 +1,24 @@
 
-console.log("good");
 
-test= document.getElementById("customers");
-console.log(test);
 const imagerx = document.querySelector('.imagerx');
 const imagery = document.querySelector('.imagery');
 const awardsection = document.querySelector('#awardsection');
 
-console.log(awardsection)
-console.log(imagerx)
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menu = document.getElementById('ne-menu');
+  const menuToggle = document.getElementById('ne-menu-toggle');
+  const menuClose = document.getElementById('ne-menu-close');
+
+  menuToggle.addEventListener('click', function() {
+      menu.classList.add('active');
+  });
+
+  menuClose.addEventListener('click', function() {
+      menu.classList.remove('active');
+  });
+});
+
 
 const image1observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
