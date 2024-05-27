@@ -170,8 +170,16 @@ body{
 }
 
 .bg-secondo{
-  background-color: #F3F7F8;
+  opacity: 0;
+    
+  transform: translateY(300px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+    background-color: #F3F7F8;
 
+}
+.bg-secondo.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
   .cover{
     max-width: 100%;
@@ -208,10 +216,11 @@ body{
     padding: 20px;
     padding-bottom: 20px;
    height: auto;
-  
    width: 100%;
    object-fit: contain;
+   
 }
+
 
 .wrapper{
   position: relative;
@@ -224,6 +233,14 @@ body{
   width: 95%;
   height: 90%;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(300px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.img-overlay-wrapper.visible{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .img-overlay-wrapper>img{
@@ -266,7 +283,26 @@ body{
 }
 
 .big-scale{
+  opacity: 0;
   overflow: hidden;
+  transform: translateX(-300px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.big-scale.visible{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.emailimage{
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.emailimage.visible{
+  transform: scale(1);
+  opacity: 1;
 }
 
 .wrapper:not(:hover)>img{
@@ -290,6 +326,14 @@ body{
 
 
 
+.partnersection{
+  background-color:#F3F7F8;
+  transform: translateX(-300px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.partnersection.visible{
+  transform: translateX(0);
+}
 
 
  .arrow-anim{
@@ -312,7 +356,10 @@ body{
  .btn-anim:hover{
     background-color: #06007a !important;
  }
-
+    .copyright{
+    color:gray;
+    font-family: var(--third-color);
+    }
  @keyframes scale-image {
   from {
     transform: scale(0);
