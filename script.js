@@ -1,3 +1,5 @@
+let delay = 0;
+
 const image1observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -42,24 +44,18 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
-entries.forEach(entry => {
+  entries.forEach((entry, index) => {
     if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      
+        setTimeout(() => {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }, delay);
+        delay += 300; // Increase delay for the next image
     }
 });
 }, observerOptions);
 
-const emailobserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          emailcont.classList.add('visible');
-          observer.unobserve(entry.target);
-        
-      }
-  });
-  }, observerOptions);
+
   
   const partnerobserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -71,8 +67,7 @@ const emailobserver = new IntersectionObserver((entries, observer) => {
     });
     }, observerOptions);
     
-
-
+  
 
 
 function increment(elem, finalVal) {
@@ -88,7 +83,7 @@ function increment(elem, finalVal) {
   };
 
 
-  const emailcont = document.querySelector('.emailcont')
+  
   const menu = document.getElementById('ne-menu');
   const menuToggle = document.getElementById('ne-menu-toggle');
   const menuClose = document.getElementById('ne-menu-close');
@@ -99,6 +94,7 @@ function increment(elem, finalVal) {
   const awardsection = document.querySelector('#awardsection');
   const aboutsection = document.querySelector('.bg-secondo');
   const emailimage = document.querySelector(".emailimage")
+  const emailcont = document.querySelector('.emailcont')
   const footer = document.querySelector(".footer");
   const partnersection = document.querySelector(".partnersection")
   const partners = document.querySelectorAll(".partner")
@@ -112,7 +108,6 @@ function increment(elem, finalVal) {
   });
 
 
-    console.log(partners)
 
     observer.observe(emailimage);
     observer.observe(bigimage);
@@ -120,7 +115,7 @@ function increment(elem, finalVal) {
     image1observer.observe(imagerx);
     image2observer.observe(imagery);
     numberobserver.observe(awardsection);
-    emailobserver.observe(emailimage)
+    observer.observe(emailcont)
     partnerobserver.observe(partnersection);
 
     partners.forEach(partner => {
