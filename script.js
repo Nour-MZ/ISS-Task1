@@ -50,7 +50,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
         }, delay);
-        delay += 300; // Increase delay for the next image
+        delay += 100; 
     }
 });
 }, observerOptions);
