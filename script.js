@@ -46,13 +46,31 @@ entries.forEach(entry => {
     if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
-        console.log("good")
+      
     }
 });
 }, observerOptions);
 
-
-
+const emailobserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          emailcont.classList.add('visible');
+          observer.unobserve(entry.target);
+        
+      }
+  });
+  }, observerOptions);
+  
+  const partnerobserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            footer.classList.add('visible');
+            observer.unobserve(entry.target);
+          
+        }
+    });
+    }, observerOptions);
+    
 
 
 
@@ -70,7 +88,7 @@ function increment(elem, finalVal) {
   };
 
 
-
+  const emailcont = document.querySelector('.emailcont')
   const menu = document.getElementById('ne-menu');
   const menuToggle = document.getElementById('ne-menu-toggle');
   const menuClose = document.getElementById('ne-menu-close');
@@ -81,8 +99,9 @@ function increment(elem, finalVal) {
   const awardsection = document.querySelector('#awardsection');
   const aboutsection = document.querySelector('.bg-secondo');
   const emailimage = document.querySelector(".emailimage")
-  const partnersection = document.querySelector(".partnersection");
-
+  const footer = document.querySelector(".footer");
+  const partnersection = document.querySelector(".partnersection")
+  const partners = document.querySelectorAll(".partner")
 
   menuToggle.addEventListener('click', function() {
       menu.classList.add('active');
@@ -93,17 +112,24 @@ function increment(elem, finalVal) {
   });
 
 
-    observer.observe(partnersection)
+    console.log(partners)
+
     observer.observe(emailimage);
     observer.observe(bigimage);
     Section1observer.observe(aboutsection);
     image1observer.observe(imagerx);
     image2observer.observe(imagery);
     numberobserver.observe(awardsection);
+    emailobserver.observe(emailimage)
+    partnerobserver.observe(partnersection);
+
+    partners.forEach(partner => {
+      observer.observe(partner);
+    });
 
     images.forEach(elimage => {
       observer.observe(elimage);
-      console.log("good")
+      
     });
     
 

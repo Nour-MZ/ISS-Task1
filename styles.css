@@ -7,6 +7,10 @@ html, body {
   overflow-x: hidden;
 }
 
+a{
+  text-decoration: none;
+}
+
 :root{
     --main-font: 'Montserrat', sans-serif;
     --second-font: 'Playfair Display', sans-serif;
@@ -109,6 +113,7 @@ body{
   width: 100vw;
   background-color: none;
   padding: 10px 20px;
+
 }
 .navcontainer{
   display: flex;
@@ -118,6 +123,19 @@ body{
 }
 .ne-logo {
   font-size: 20px;
+  cursor: pointer;
+  animation: scale-image 1s  0s ;
+
+}
+
+.partner{
+  opacity: 0;
+  transition: opacity 2s ease-out
+
+}
+
+.partner.visible{
+  opacity: 1;
 }
 
 .ne-menu {
@@ -125,6 +143,7 @@ body{
   gap: 10px;
   z-index: 99;
   color: black ;
+  animation: scale-image 1s  0s ;
 }
 
 
@@ -204,7 +223,17 @@ body{
 
 
 .about-par{
-  line-height:200%;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-weight: 0;
+  font-weight: 300;
+  color: var(--third-color);
+  
+}
+
+.aboutlead{
+  margin-top: 30px;
+  margin-bottom: 35px !important;
 }
 
 .overlayer-extra{
@@ -217,24 +246,24 @@ body{
     padding-bottom: 20px;
    height: auto;
    width: 100%;
-   object-fit: contain;
-   
+  
 }
 
 
 .wrapper{
   position: relative;
-  width: 95%;
+  width: 100%;
   height: 95%;
   overflow: hidden;   
 }
 .img-overlay-wrapper{
+  cursor: pointer;
   position: relative;
-  width: 95%;
+  width: 100%;
   height: 90%;
   overflow: hidden;
   opacity: 0;
-  transform: translateX(300px);
+  transform: translateX(200px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -328,11 +357,7 @@ body{
 
 .partnersection{
   background-color:#F3F7F8;
-  transform: translateX(-300px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-.partnersection.visible{
-  transform: translateX(0);
+
 }
 
 
@@ -344,8 +369,8 @@ body{
  }
 
  .arrow-anim:hover>img{
-    opacity: 0;
-    transform: translateX(20px);
+
+    transform: translateX(10px);
  }
 
  .nav-link:hover{
@@ -353,13 +378,38 @@ body{
   transition: 0.3s ease-in-out
  }
 
- .btn-anim:hover{
+ .btn:hover{
     background-color: #06007a !important;
+    transition: all 0.4s;
  }
     .copyright{
     color:gray;
     font-family: var(--third-color);
     }
+
+    .footer{
+      opacity: 0;
+        
+      transform: translateY(300px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    
+    }
+    .footer.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }   
+
+    .emailcont{
+      opacity: 0;
+      transform: translateX(300px);
+      transition: opacity 1s ease-out, transform 0.3s ease-out;
+    }
+
+    .emailcont.visible{
+      opacity: 1;
+      transform: translateX(0);
+    }
+
  @keyframes scale-image {
   from {
     transform: scale(0);
