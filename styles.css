@@ -387,7 +387,9 @@ body{
   color:white;
   transition: 0.3s ease-in-out
  }
-
+ .btn{
+  background-color: var(--cta-color) !important;
+ }
  .btn:hover{
     background-color: #06007a !important;
     transition: all 0.4s;
@@ -425,7 +427,32 @@ body{
       transition: all 0.3s;
     }
 
-    
+    .projects-container{
+      font-family:var(--main-font);
+    }
+
+    .heading1{
+      font-size: 80px;   
+      font-family: var(--second-font);
+    }
+    .font18{
+      font-size: 18px;
+    }
+
+    .main-text{
+      color: var(--main-color);
+    }
+    .medium-text{
+      color:var(--second-color);
+    }
+
+    .small-text{
+      color:var(--third-color);
+    }
+    .customers{
+      font-size: 45px; 
+      font-family:var(--third-font);
+    }
 
  @keyframes scale-image {
   from {
